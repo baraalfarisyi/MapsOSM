@@ -1,0 +1,102 @@
+/* Atur ukuran dan tampilan peta */
+#map {
+    height: 600px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#remove-marker-btn {
+    height: 40px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+/* Desain hasil pencarian */
+#results {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 1000;
+    background-color: white;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    display: none;
+} */
+
+#results div {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#results div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Popup loading sederhana */
+#loading-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Pastikan dimulai dengan tidak terlihat */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Tetap di depan elemen lainnya */
+}
+
+#loading-popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Atur tampilan kontrol kustom */
+.leaflet-control-custom {
+    background-color: white;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* Close button positioned to the left of the search box */
+.geocoder-close-btn {
+    position: absolute;
+    top: 20px; /* Adjusted down from 12px to 20px for more spacing */
+    left: 310px; /* Positioned according to your original preference */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    display: inline-block; /* Inline-block for better layout control */
+}
+
+/* Ensure relative positioning for the search container */
+.leaflet-control-geocoder {
+    position: relative;
+    display: block; /* Block display for the search container */
+}
